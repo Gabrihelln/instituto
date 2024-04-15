@@ -16,7 +16,7 @@ function Layout () {
 }
 
 function App() {
-  const theme = "light";
+  const theme = "dark";
   const isLoading = false;
   return (
     <main className={theme}>
