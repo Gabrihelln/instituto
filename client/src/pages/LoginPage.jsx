@@ -85,7 +85,7 @@ const LoginPage = () => {
           <div className="flex items-center justify-center text-gray-600 dark:text-gray-300">
             <p>
               Ainda não tem conta? {" "}
-              <Link to='/sing-up' className='text-blue-600 font-medium'>
+              <Link to='/sign-up' className='text-blue-600 font-medium'>
                 Inscreva-se!
               </Link>
             </p>
