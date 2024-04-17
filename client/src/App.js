@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Outlet } from "react-router-dom"
 import { BlogDetails, CategoriesPage, Home, LoginPage, SignupPage, WriterPage } from './pages';
 import { Loading, Navbar } from './components';
+import useStore from './store';
 
 function Layout () {
   return (
@@ -16,8 +17,8 @@ function Layout () {
 }
 
 function App() {
-  const theme = "dark";
-  const isLoading = false;
+  const {theme, isLoading} = useStore()
+  console.log(theme)
   return (
     <main className={theme}>
       <div className='w-full min-h-screen relative bg-white dark:bg-[#020b19]'>
