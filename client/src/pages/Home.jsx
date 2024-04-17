@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { CATEGORIES, posts } from "../utils/dummyData";
-import { Banner } from "../components";
+import { CATEGORIES, posts, popular } from "../utils/dummyData";
+import { Banner, Card, PopularPost, PopularWriter } from "../components";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -9,6 +9,9 @@ const Home = () => {
 
   const randomIndex = Math.floor(Math.random() * posts.length);
 
+  const handlePageChange = () => {
+
+  }
 
   if (posts.length < 1) 
     return (
@@ -28,7 +31,8 @@ const Home = () => {
         <div className="w-full flex flex-wrap py-10 gap-8">
           {
           CATEGORIES.map((cat) => (
-            <Link className={`flex items-center justify-center gap-3${cat.color} text-white font-semibold text-base px-4 py-2 rounded cursor-pointer`}>
+            <Link to={`/category?cat=${cat?.label}`}
+            className={`flex items-center justify-center gap-3 ${cat.color} text-white font-semibold text-base px-4 py-2 rounded cursor-pointer`}>
             {cat.icon}
             <span>{cat.label}</span>
             </Link>
@@ -40,12 +44,20 @@ const Home = () => {
           {/* LEFT SIDE */}
           <div className="w-full md:w-2/3 flex flex-col gap-10 gap-y-20">
             {
-              post?.map((post,index) => (
+              posts?.map((post,index) => (
                 <Card key={post?._id} post={post} index={index}/>
-              ))
-            }
+              ))}
+              <div className="w-full flex items-center justify-center">
+                {/* <Pagination totalPages={numOfPages} onPageChange={handlePageChange}/> */}
+              </div>
           </div>
           {/* RIGHT SIDE */}
+          <div className="w-full md:w-1/4 flex flex-col gap-y-12">
+              {/* Popular Post */}
+              <PopularPost posts={popular?.posts} />
+              {/* Popular writers */}
+              <PopularWriter data={popular?.writers}/>
+          </div>
       </div>
     </div>
   </div>
