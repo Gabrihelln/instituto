@@ -7,7 +7,8 @@ import Banner from "./Banner";
 import Card from "./Card";
 import PopularPost from "./PopularPost";
 import PopularWriter from "./PopularWriter";
+import Navbar from "./Navbar";
 
 export {
-    Loading, Logo, Button, Divider, InputBox, Banner, Card, PopularPost, PopularWriter
+    Loading, Logo, Button, Divider, InputBox, Banner, Card, PopularPost, PopularWriter, Navbar
 }

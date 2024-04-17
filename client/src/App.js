@@ -1,12 +1,12 @@
 import React from 'react';
 import { Routes, Route, Outlet } from "react-router-dom"
 import { BlogDetails, CategoriesPage, Home, LoginPage, SignupPage, WriterPage } from './pages';
-import { Loading } from './components';
+import { Loading, Navbar } from './components';
 
 function Layout () {
   return (
     <div className='w-full flex flex-col min-h-screen px-4 md:px-10 2xl:px-29=8'>
-      {/* <Navbar/> */}
+      <Navbar/>
       <div className='flex-1'>
         <Outlet/>
       </div>
