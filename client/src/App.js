@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Outlet } from "react-router-dom"
 import { BlogDetails, CategoriesPage, Home, LoginPage, SignupPage, WriterPage } from './pages';
-import { Loading, Navbar } from './components';
+import { Footer, Loading, Navbar } from './components';
 import useStore from './store';
 
 function Layout () {
@@ -11,7 +11,7 @@ function Layout () {
       <div className='flex-1'>
         <Outlet/>
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }
