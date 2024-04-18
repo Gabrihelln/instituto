@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { CATEGORIES, posts, popular } from "../utils/dummyData";
-import { Banner, Card, PopularPost, PopularWriter } from "../components";
+import { Banner, Card, Pagination, PopularPost, PopularWriter } from "../components";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const numOfPages = 1
-  const [ page, setPage] = useState(1)
+  const numOfPages = 4
+  const [ page, setPage] = useState(0)
 
   const randomIndex = Math.floor(Math.random() * posts.length);
 
-  const handlePageChange = () => {
-
+  const handlePageChange = (val) => {
+    setPage(val)
   }
 
   if (posts.length < 1) 
@@ -48,7 +48,7 @@ const Home = () => {
                 <Card key={post?._id} post={post} index={index}/>
               ))}
               <div className="w-full flex items-center justify-center">
-                {/* <Pagination totalPages={numOfPages} onPageChange={handlePageChange}/> */}
+                <Pagination totalPages={numOfPages} onPageChange={handlePageChange}/>
               </div>
           </div>
           {/* RIGHT SIDE */}
