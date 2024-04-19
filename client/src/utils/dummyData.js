@@ -308,7 +308,7 @@ export const writer = {
   ],
 };
 
-export const comments = [
+export const COMMENTS  = [
   {
     _id: "655ce52bde4a69fbc727abac",
     user: { _id: "655acf151a4659413d8ab136", name: "CodeWave Mordecai" },

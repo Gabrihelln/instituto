@@ -10,7 +10,8 @@ import PopularWriter from "./PopularWriter";
 import Navbar from "./Navbar";
 import Pagination from "./Pagination";
 import Footer from "./Footer";
+import PostComments from "./PostComments";
 
 export {
-    Loading, Logo, Button, Divider, InputBox, Banner, Card, PopularPost, PopularWriter, Navbar, Pagination, Footer
+    Loading, Logo, Button, Divider, InputBox, Banner, Card, PopularPost, PopularWriter, Navbar, Pagination, Footer, PostComments
 }
